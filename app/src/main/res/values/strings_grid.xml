@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="grid_app_title">J2MEX4</string>
+    <string name="grid_toggle_max">Phóng to / thu nhỏ lưới này</string>
+    <string name="grid_empty">Lưới %1$d\n(Trống)\nBấm nút thư mục để thêm</string>
+    <string name="grid_running">Đang chạy</string>
+    <string name="grid_stopped">Đã dừng</string>
+    <string name="grid_converting">Đang convert…</string>
+    <string name="grid_run">Chạy</string>
+    <string name="grid_stop">Dừng</string>
+    <string name="grid_settings">Thiết lập</string>
+    <string name="grid_pick">Chọn file jar</string>
+    <string name="grid_maximize">Phóng to</string>
+    <string name="grid_restore">Thu nhỏ</string>
+    <string name="grid_menu_more">Thêm</string>
+    <string name="grid_menu_default_settings">Thiết lập hồ sơ</string>
+    <string name="grid_menu_app_settings">Cài đặt ứng dụng</string>
+    <string name="grid_menu_classic">Danh sách ứng dụng gốc</string>
+    <string name="grid_menu_about">Giới thiệu</string>
+    <string name="grid_menu_stop_all">Dừng tất cả</string>
+    <string name="grid_menu_exit">Thoát</string>
+    <string name="grid_about_text">J2ME Loader X4\nDựa trên J2ME-Loader 1.7.9\nCopyright 2017-2023 Nikita Shakarun</string>
+    <string name="grid_pick_slot_title">Mở file này ở lưới nào?</string>
+    <string name="grid_slot_name">Lưới %1$d</string>
+    <string name="grid_no_game">Lưới này chưa có game. Hãy chọn file jar trước.</string>
+    <string name="grid_first_settings">Game mới: hãy thiết lập rồi bấm Start.</string>
+    <string name="grid_convert_ok">Đã convert: %1$s. Bấm Chạy để bắt đầu.</string>
+    <string name="grid_convert_fail">Lỗi: %1$s</string>
+    <string name="grid_start_fail">Không khởi động được lưới: %1$s</string>
+</resources>

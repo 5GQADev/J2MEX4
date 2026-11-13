@@ -1,0 +1,37 @@
+name: Build APK
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install SDK components
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-33" "build-tools;33.0.2" "ndk;22.1.7171670" > /dev/null
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build (debug + release, both debug-signed)
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon --continue assembleOpenDebug assembleOpenRelease
+
+      - name: Upload APKs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: J2ME-Loader-Grid-apk
+          path: app/build/outputs/apk/**/*.apk
+          if-no-files-found: warn
